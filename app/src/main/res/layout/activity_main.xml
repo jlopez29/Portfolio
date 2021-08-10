@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activites.MainActivity"
+    android:background="@color/teal_700">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/img_profile"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:background="@android:color/transparent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0"
+
+        android:scaleType="fitXY"
+        app:roundPercent="1"
+        app:srcCompat="@drawable/img_rando" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/value_my_name"
+
+        app:layout_constraintTop_toBottomOf="@id/img_profile"
+        app:layout_constraintStart_toStartOf="@id/img_profile"
+        app:layout_constraintEnd_toEndOf="@id/img_profile"
+        android:layout_marginTop="@dimen/margin_medium"
+
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_linear_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:backgroundTint="@color/teal_900"
+        android:background="@drawable/bg_rounded_edges"
+        android:orientation="vertical"
+
+        app:layout_constraintTop_toBottomOf="@id/txt_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        android:layout_margin="@dimen/margin_large">
+        <Button
+            android:id="@+id/btn_education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:text="Education"
+            android:backgroundTint="@color/teal_800"/>
+        <Button
+            android:id="@+id/btn_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+
+            android:text="Experience"
+            android:backgroundTint="@color/teal_800"/>
+        <Button
+            android:id="@+id/btn_projects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+
+            android:text="Projects"
+            android:backgroundTint="@color/teal_800"/>
+        <Button
+            android:id="@+id/btn_skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+
+            android:text="Skills"
+            android:backgroundTint="@color/teal_800"/>
+        <Button
+            android:id="@+id/btn_showcase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+
+            android:text="Showcase"
+            android:backgroundTint="@color/teal_800"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ic_linkedin"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:srcCompat="@drawable/ic_linkedin"
+
+        app:layout_constraintTop_toBottomOf="@id/layout_linear_buttons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ic_github"
+
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <ImageView
+        android:id="@+id/ic_github"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="5dp"
+        app:srcCompat="@drawable/ic_github"
+
+        app:layout_constraintTop_toBottomOf="@id/layout_linear_buttons"
+        app:layout_constraintStart_toEndOf="@id/ic_linkedin"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
